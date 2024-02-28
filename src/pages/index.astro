@@ -1,9 +1,84 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Badge from "../components/Badge.astro";
+import GithubLink from "../components/GithubLink.astro";
+import Layout from "../layouts/Layout.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import Github from "../components/icons/Github.astro";
+import Mail from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro"
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Portfolio</h1>
-	</main>
+<Layout
+  title="Porfolio de franco - Desarrollador y Programador Web con 3 años de experiencia."
+  description="Contrata a diaf para crear tu aplicación web o móvil. Desarrollador y Programador Web. Especializado en crear aplicaciones únicas."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img class="rounded-full size-12 mb-4" src="/Yo.jpeg" alt="mi foto" />
+      <!-- soloFac enlace a github -->
+      <h1
+        class="text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, I'm <GithubLink>soloFac</GithubLink>
+        <a
+          href="https://www.linkedin.com/in/solofac"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <a 
+						href="https://linkedin.com/in/solofac"
+						target="_blank"
+						rel="noopener"
+						class="flex justify-center items-center">
+            <Badge>Available for hire</Badge>
+          </a>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>+2 años de experiencia.</span>
+        <span class="text-yellow-200/90">Desarrollador Web FullStack</span>
+        <span class="text-red-200/90">de Tucumán, Argentina❤️</span>. <span
+          class="opacity-85"
+          >Especializado en el desarrollo de aplicaciones web únicas.</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8  flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/solofac">
+          <LinkedIn class="size-4 lg:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://www.github.com/solofac">
+          <Github class="size-4 lg:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:francopdlr@gmail.com">
+          <Mail class="size-4 lg:size-6" />
+          francopdlr@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="work">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Professional Experience
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+		<SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-7" />
+        Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
 </Layout>

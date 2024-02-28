@@ -1,0 +1,42 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: 'Actualmente ... ',
+    title: 'Software Developer - Diaf',
+    description:
+        'I am currently working as a fullstack developer at Diaf, a company that provides software solutions services for small and medium-sized businesses. I am working on new proyects and maintaining the existing ones. I am responsible for the development of the front-end and back-end',
+  },
+  {
+    date: 'January 2024 ',
+    title: 'Backend Developer - Effik Contabilidade',
+    freelance: true,
+    description:
+        'I worked as a back-end developer at Effik Contabilidade, a company that provides accounting services for small and medium-sized businesses. I am responsible for extracting data with a Scrapper in order to get leads.',
+  },
+  {
+    date: 'January 2023',
+    title: 'FullStack Developer - Royal Enfield',
+    freelance: true,
+    description:
+      'All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.'
+  },
+  {
+    date: 'January 2023 - August 2023',
+    title: 'FullStack Developer - Academia General Belgrano',
+    description:
+      'I create a Scrapper to Get and Load data from an Educational Website. Desing a database modeling for an administration Software System.'
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map( experience => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
